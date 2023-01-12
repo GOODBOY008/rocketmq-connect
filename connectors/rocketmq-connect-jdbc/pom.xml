@@ -22,6 +22,7 @@
         <module>rocketmq-connect-jdbc-core</module>
         <module>rocketmq-connect-jdbc-mysql</module>
         <module>rocketmq-connect-jdbc-openmldb</module>
+        <module>rocketmq-connect-jdbc-oceanbase</module>
     </modules>
 
     <name>rocketmq-connect-jdbc</name>
