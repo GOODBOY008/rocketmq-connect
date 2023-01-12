@@ -22,12 +22,12 @@ import io.openmessaging.KeyValue;
 import java.lang.reflect.Method;
 
 public class ConfigUtil {
-    public static <T> void load(KeyValue props, Object object) {
+    public static void load(KeyValue props, Object object) {
 
         properties2Object(props, object);
     }
 
-    private static <T> void properties2Object(final KeyValue p, final Object object) {
+    private static void properties2Object(final KeyValue p, final Object object) {
 
         Method[] methods = object.getClass().getMethods();
         for (Method method : methods) {
