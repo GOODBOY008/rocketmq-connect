@@ -22,19 +22,8 @@
     <version>0.0.1-SNAPSHOT</version>
 
     <name>connect-oceanbase</name>
-    <url>https://github.com/apache/incubator-rocketmq-externals/tree/master/rocketmq-connect-mongo</url>
+    <url>https://github.com/apache/incubator-rocketmq-externals/tree/master/rocketmq-connect-oceanbase</url>
 
-    <licenses>
-        <license>
-            <name>The Apache Software License, Version 2.0</name>
-            <url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
-        </license>
-    </licenses>
-
-    <issueManagement>
-        <system>jira</system>
-        <url>https://issues.apache.org/jira/browse/RocketMQ</url>
-    </issueManagement>
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
@@ -44,6 +33,9 @@
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
         <oblogclient.version>1.0.3</oblogclient.version>
+
+        <!-- Dependencies version properties -->
+        <openmessaging-connector.version>0.1.4</openmessaging-connector.version>
     </properties>
 
     <build>
@@ -169,7 +161,7 @@
         <dependency>
             <groupId>io.openmessaging</groupId>
             <artifactId>openmessaging-connector</artifactId>
-            <version>0.1.1</version>
+            <version>${openmessaging-connector.version}</version>
         </dependency>
         <dependency>
             <groupId>ch.qos.logback</groupId>
