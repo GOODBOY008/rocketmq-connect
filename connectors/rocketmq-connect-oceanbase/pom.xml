@@ -32,7 +32,7 @@
         <!-- Compiler settings properties -->
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
-        <oblogclient.version>1.0.3</oblogclient.version>
+        <oblogclient.version>1.0.6</oblogclient.version>
 
         <!-- Dependencies version properties -->
     </properties>
@@ -136,6 +136,27 @@
     </build>
 
     <dependencies>
+        <!-- Debezium dependencies -->
+        <dependency>
+            <groupId>io.debezium</groupId>
+            <artifactId>debezium-api</artifactId>
+            <version>1.6.4.Final</version>
+        </dependency>
+        <dependency>
+            <groupId>io.debezium</groupId>
+            <artifactId>debezium-embedded</artifactId>
+            <version>1.6.4.Final</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>kafka-log4j-appender</artifactId>
+                    <groupId>org.apache.kafka</groupId>
+                </exclusion>
+                <exclusion>
+                    <groupId>org.glassfish.jersey.core</groupId>
+                    <artifactId>*</artifactId>
+                </exclusion>
+            </exclusions>
+        </dependency>
         <dependency>
             <groupId>com.oceanbase.logclient</groupId>
             <artifactId>logproxy-client</artifactId>

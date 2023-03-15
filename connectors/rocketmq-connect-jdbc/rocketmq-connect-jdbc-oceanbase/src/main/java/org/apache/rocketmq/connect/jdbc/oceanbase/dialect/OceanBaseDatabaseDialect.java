@@ -137,7 +137,7 @@ public class OceanBaseDatabaseDialect extends GenericDatabaseDialect {
 
     @Override
     protected String sanitizedUrl(String url) {
-        // MySQL can also have "username:password@" at the beginning of the host list and
+        // OceanBase can also have "username:password@" at the beginning of the host list and
         // in parenthetical properties
         return super.sanitizedUrl(url)
                 .replaceAll("(?i)([(,]password=)[^,)]*", "$1****")
